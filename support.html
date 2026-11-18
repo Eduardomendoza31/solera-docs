@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Solera theme support</title>
+<meta name="description" content="Contact support for the Solera Shopify theme.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="brand" href="index.html">SOLERA<small>Support</small></a>
+    <nav class="topnav" aria-label="Site">
+      <a class="btn btn--ghost" href="index.html">Documentation</a>
+      <a class="btn btn--ghost" href="index.html#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<div class="layout">
+  <main id="main" class="content" style="margin: 0 auto;">
+    <p class="eyebrow">Theme support</p>
+    <h1>How can we help?</h1>
+    <p class="lead">Most answers are already in the <a href="index.html">documentation</a> and the <a href="index.html#faq">FAQ</a>. If you still need help, send us the details below. We reply within two business days, Monday to Friday.</p>
+
+    <div class="success" id="sent" role="status" tabindex="-1" hidden>
+      <p style="margin:0"><strong>Thanks, we received your request.</strong> You'll get a confirmation email now and a reply from us within two business days.</p>
+    </div>
+
+    <form
+      class="form"
+      id="SupportForm"
+      action="https://formsubmit.co/emsolutions.notif@gmail.com"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <input type="hidden" name="_subject" id="SupportSubjectHidden" value="Solera support request">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://eduardomendoza31.github.io/solera-docs/support.html#sent">
+      <input type="hidden" name="_autoresponse" value="Thanks for contacting Solera support. We received your request and will reply within two business days, Monday to Friday. In the meantime, you can check the documentation and FAQ.">
+      <input type="hidden" name="Theme" value="Solera">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="field">
+        <label for="SupportName">Name</label>
+        <input id="SupportName" name="Name" type="text" autocomplete="name" required>
+      </div>
+
+      <div class="field">
+        <label for="SupportEmail">Email</label>
+        <input id="SupportEmail" name="email" type="email" autocomplete="email" required>
+      </div>
+
+      <div class="field field--full">
+        <label for="SupportStore">Store URL</label>
+        <input id="SupportStore" name="Store URL" type="text" placeholder="your-store.myshopify.com" aria-describedby="SupportStoreHint" required>
+        <span class="hint" id="SupportStoreHint">Example: your-store.myshopify.com. If your store is password protected, add the password in your message.</span>
+      </div>
+
+      <div class="field field--full">
+        <label for="SupportSubject">Subject (optional)</label>
+        <input id="SupportSubject" name="Subject" type="text" maxlength="120" placeholder="For example: Vintage buttons not showing">
+      </div>
+
+      <div class="field field--full">
+        <label for="SupportMessage">Describe the problem</label>
+        <textarea id="SupportMessage" name="Problem" required aria-describedby="SupportMessageHint"></textarea>
+        <span class="hint" id="SupportMessageHint">Tell us which page and section, what you expected and what happened instead.</span>
+      </div>
+
+      <div class="field field--full">
+        <label for="SupportFile">Screenshot or file (optional)</label>
+        <input id="SupportFile" name="attachment" type="file" accept="image/png, image/jpeg, image/gif, image/webp, application/pdf">
+        <span class="hint">PNG, JPG, GIF, WebP or PDF.</span>
+      </div>
+
+      <div class="field--full">
+        <button class="btn" type="submit">Send request</button>
+      </div>
+    </form>
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <span>Solera theme support</span>
+    <a href="index.html">Documentation</a>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var form = document.getElementById('SupportForm');
+    var subject = document.getElementById('SupportSubject');
+    var hidden = document.getElementById('SupportSubjectHidden');
+    form.addEventListener('submit', function () {
+      var text = subject.value.trim();
+      hidden.value = text ? 'Solera support: ' + text : 'Solera support request';
+    });
+    if (window.location.hash === '#sent') {
+      var box = document.getElementById('sent');
+      box.hidden = false;
+      box.focus();
+    }
+  })();
+</script>
+</body>
+</html>

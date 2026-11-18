@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Solera theme documentation</title>
+<meta name="description" content="Setup guide, settings reference and FAQ for the Solera Shopify theme.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="brand" href="index.html">SOLERA<small>Documentation</small></a>
+    <nav class="topnav" aria-label="Site">
+      <a class="btn btn--ghost" href="#faq">FAQ</a>
+      <a class="btn" href="support.html">Contact support</a>
+    </nav>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="toc" aria-label="On this page">
+    <p>On this page</p>
+    <ul>
+      <li><a href="#getting-started">Getting started</a></li>
+      <li><a href="#presets">Presets</a></li>
+      <li><a href="#theme-settings">Theme settings</a></li>
+      <li><a href="#home-page">Home page sections</a></li>
+      <li><a href="#product-page">Product page</a></li>
+      <li><a href="#metafields">Tasting metafields</a></li>
+      <li><a href="#vintages">Vintages and comparison</a></li>
+      <li><a href="#collections">Collections and filters</a></li>
+      <li><a href="#cart">Cart</a></li>
+      <li><a href="#box-builder">Box builder</a></li>
+      <li><a href="#subscriptions">Subscriptions</a></li>
+      <li><a href="#age-verification">Age verification</a></li>
+      <li><a href="#quiz">Taste quiz</a></li>
+      <li><a href="#languages">Languages and markets</a></li>
+      <li><a href="#updates">Updating the theme</a></li>
+      <li><a href="#custom-code">Custom code</a></li>
+      <li><a href="#support-policy">Support policy</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#release-notes">Release notes</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" class="content">
+    <p class="eyebrow">Version 1.0.5</p>
+    <h1>Solera documentation</h1>
+    <p class="lead">Solera is a Shopify theme for premium drinks: wine, spirits, specialty coffee and tea. This guide covers setup, every theme feature and the most common questions.</p>
+
+    <h2 id="getting-started">Getting started</h2>
+    <ol>
+      <li>From your Shopify admin, go to <strong>Online Store → Themes</strong>.</li>
+      <li>Find Solera in the Theme Store and select <strong>Try theme</strong> to add it to your theme library. You only pay when you publish it.</li>
+      <li>Select <strong>Customize</strong> to open the theme editor.</li>
+      <li>Choose a preset in <strong>Theme settings → Theme styles</strong>, then add your logo in <strong>Theme settings → Logo</strong>.</li>
+      <li>Create your main menu and footer menu in <strong>Content → Menus</strong>. Solera uses the menus with the handles <code>main-menu</code> and <code>footer</code> by default.</li>
+      <li>Preview your store on desktop and mobile, then select <strong>Publish</strong>.</li>
+    </ol>
+    <div class="note"><strong>Tip:</strong> before you publish a new version over a live store, duplicate your current theme so you can go back to it if needed.</div>
+
+    <h2 id="presets">Presets</h2>
+    <p>Solera includes three presets. Each one can be fully customized after you install it.</p>
+    <ul class="presets">
+      <li>
+        <h3 style="margin-top:0">Solera</h3>
+        <p class="hint">Dark and editorial, for wine and spirits. Age verification is on.</p>
+        <div class="swatches" aria-hidden="true"><span style="background:#0F0D0C"></span><span style="background:#3B1519"></span><span style="background:#C2A36B"></span><span style="background:#EDE6DA"></span></div>
+      </li>
+      <li>
+        <h3 style="margin-top:0">Tueste</h3>
+        <p class="hint">Warm espresso tones with rounded buttons, for coffee roasters.</p>
+        <div class="swatches" aria-hidden="true"><span style="background:#14100D"></span><span style="background:#3A2418"></span><span style="background:#C8875A"></span><span style="background:#F1E8DC"></span></div>
+      </li>
+      <li>
+        <h3 style="margin-top:0">Hoja</h3>
+        <p class="hint">A light palette with deep green, for tea, chocolate and pantry goods.</p>
+        <div class="swatches" aria-hidden="true"><span style="background:#F4F0E8"></span><span style="background:#23392F"></span><span style="background:#7D877F"></span><span style="background:#1C2420"></span></div>
+      </li>
+    </ul>
+
+    <h2 id="theme-settings">Theme settings</h2>
+    <p>Open <strong>Theme settings</strong> (the brush icon in the editor) to change styles that apply across your store.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th scope="col">Group</th><th scope="col">What it controls</th></tr></thead>
+      <tbody>
+        <tr><td>Logo</td><td>Logo image and width, favicon.</td></tr>
+        <tr><td>Colors</td><td>Page, surface, feature and button colors. Every background has a matching text color. Keep borders at a 3:1 contrast with the background so buttons stay visible.</td></tr>
+        <tr><td>Typography</td><td>Heading and body fonts from the Shopify font library, size scales and uppercase labels.</td></tr>
+        <tr><td>Layout</td><td>Page width, button and image corner radius, and the editorial section numbers (No. 01, No. 02…).</td></tr>
+        <tr><td>Product cards</td><td>Image ratio, hover image, vendor, body meter, quick add and the low stock badge threshold.</td></tr>
+        <tr><td>Cart</td><td>Drawer or page, order note, free shipping goal, gift wrap product and suggested products.</td></tr>
+        <tr><td>Age verification</td><td>On or off, texts, decline link and how many days to remember the answer.</td></tr>
+        <tr><td>Social media</td><td>Links shown in the footer.</td></tr>
+        <tr><td>Search</td><td>Search suggestions as shoppers type.</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2 id="home-page">Home page sections</h2>
+    <p>Add, remove and reorder sections from the left sidebar of the editor. Solera includes:</p>
+    <ul>
+      <li><strong>Vintage hero:</strong> a large headline with facts (origin, altitude, production) and an outline number over the image, such as a vintage year. Italic text in the heading is shown in the accent color.</li>
+      <li><strong>Taste quiz:</strong> short questions that send shoppers to a filtered collection. See <a href="#quiz">Taste quiz</a>.</li>
+      <li><strong>Featured collection</strong>, <strong>Collection list</strong> and <strong>Featured product</strong>.</li>
+      <li><strong>Box builder:</strong> shoppers fill a case and see their savings. See <a href="#box-builder">Box builder</a>.</li>
+      <li><strong>Subscription plans:</strong> up to four plans, with an optional highlighted plan.</li>
+      <li><strong>Story timeline:</strong> the steps of how your product is made.</li>
+      <li><strong>Trust badges</strong>, <strong>Image with text</strong>, <strong>Rich text</strong>, <strong>Video</strong>, <strong>Blog posts</strong>, <strong>Newsletter</strong> and <strong>Custom Liquid</strong>.</li>
+    </ul>
+
+    <h2 id="product-page">Product page</h2>
+    <p>The <strong>Product information</strong> section is built from blocks you can reorder: vendor, title, price, variant picker, buy buttons, pickup availability, inventory status, short notes, description, tasting scales, complementary products, collapsible rows, share and Custom Liquid. Apps can add their own blocks here too.</p>
+    <ul>
+      <li><strong>Price</strong> shows sale prices, unit prices and whether taxes are included.</li>
+      <li><strong>Buy buttons</strong> include the quantity selector, dynamic checkout buttons, Shop Pay Installments and purchase options for subscriptions.</li>
+      <li><strong>Pickup availability</strong> appears when you set up local pickup in <strong>Settings → Shipping and delivery</strong>.</li>
+      <li><strong>Inventory status</strong> and low stock badges always use your real inventory. They only show when the variant tracks inventory.</li>
+      <li><strong>Complementary products</strong> come from the Shopify Search &amp; Discovery app.</li>
+      <li>Media supports images, videos, YouTube or Vimeo links and 3D models, with a button to view 3D models in your space on supported phones.</li>
+    </ul>
+    <p>Below the main section, the default product template also includes <strong>Tasting profile</strong>, <strong>Variant comparison</strong> and <strong>Related products</strong>.</p>
+
+    <h2 id="metafields">Tasting metafields</h2>
+    <p>Solera reads product metafields in the <code>custom</code> namespace. Create them in <strong>Settings → Custom data → Products</strong>. Every field is optional: empty fields are hidden.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th scope="col">Namespace and key</th><th scope="col">Type</th><th scope="col">Shown as</th></tr></thead>
+      <tbody>
+        <tr><td><code>custom.tasting_body</code></td><td>Integer, 1 to 5</td><td>Body scale and the meter on product cards</td></tr>
+        <tr><td><code>custom.tasting_tannin</code></td><td>Integer, 1 to 5</td><td>Second scale</td></tr>
+        <tr><td><code>custom.tasting_acidity</code></td><td>Integer, 1 to 5</td><td>Third scale</td></tr>
+        <tr><td><code>custom.tasting_sweetness</code></td><td>Integer, 1 to 5</td><td>Fourth scale</td></tr>
+        <tr><td><code>custom.tasting_summary</code></td><td>Single line text</td><td>Heading of the tasting profile</td></tr>
+        <tr><td><code>custom.tasting_notes</code></td><td>List of single line text</td><td>Note chips</td></tr>
+        <tr><td><code>custom.pairing</code></td><td>Single line text</td><td>Pairing</td></tr>
+        <tr><td><code>custom.serve_temperature</code></td><td>Single line text</td><td>Serve</td></tr>
+        <tr><td><code>custom.drink_until</code></td><td>Single line text</td><td>Drink until</td></tr>
+        <tr><td><code>custom.decant_time</code></td><td>Single line text</td><td>Decant</td></tr>
+        <tr><td><code>custom.card_subtitle</code></td><td>Single line text</td><td>Subtitle on product cards. The product type is used when empty.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note"><strong>Selling coffee or tea?</strong> Rename the scales in the Tasting profile section (for example Body, Acidity, Sweetness, Bitterness). You can also connect each scale to any metafield you already use with the dynamic source button.</div>
+
+    <h2 id="vintages">Vintages and comparison</h2>
+    <p>If your product has an option such as <strong>Vintage</strong>, Solera shows it as large year buttons, shows the selected year over the first image and, for single-option products, the stock of each year.</p>
+    <ol>
+      <li>In the Product information section, set <strong>Vintage option name</strong> to the exact option name you use, such as Vintage, Year or Roast date.</li>
+      <li>For the comparison table, create the variant metafields <code>custom.compare_1</code>, <code>custom.compare_2</code> and <code>custom.compare_3</code> (single line text), then rename the columns in the Variant comparison section.</li>
+    </ol>
+
+    <h2 id="collections">Collections and filters</h2>
+    <p>Collection and search pages support sorting and filtering by availability, price, product type, vendor, variant options and metafields. Choose which filters appear in the <strong>Search &amp; Discovery</strong> app. Filtering updates the page without reloading, and every filter combination has its own address that shoppers can share.</p>
+
+    <h2 id="cart">Cart</h2>
+    <ul>
+      <li><strong>Cart type:</strong> a drawer that slides in, or a full page.</li>
+      <li><strong>Free shipping goal:</strong> enter the amount in your store currency. It must match your real shipping rates. The bar is hidden for shoppers browsing in another currency.</li>
+      <li><strong>Gift wrap:</strong> create a product with one variant (for example "Gift box"), then select it in <strong>Theme settings → Cart</strong>. Shoppers add or remove it with one tap.</li>
+      <li><strong>Order note</strong>, discounts, subscription details and accelerated checkout buttons are supported in the drawer and on the cart page.</li>
+    </ul>
+
+    <h2 id="box-builder">Box builder</h2>
+    <p>The Box builder section lets shoppers build a case from a collection of products without variants. The section shows three tiers, such as 3, 6 and 12 bottles.</p>
+    <div class="note"><strong>Important:</strong> the theme shows the savings, but it does not create discounts. In <strong>Discounts</strong>, create automatic quantity discounts that match your tiers. Otherwise shoppers will see the full price at checkout.</div>
+
+    <h2 id="subscriptions">Subscriptions</h2>
+    <p>Install a subscription app (for example Shopify Subscriptions) and create your plans. Solera shows the purchase options on the product page, the plan name in the cart and the plan price everywhere. Use the Subscription plans section on the home page to present your club and link each plan to its product.</p>
+
+    <h2 id="age-verification">Age verification</h2>
+    <p>Turn it on in <strong>Theme settings → Age verification</strong>. Shoppers confirm once and the answer is remembered on their device for the number of days you choose. It is hidden while you edit in the theme editor so it doesn't block your preview.</p>
+    <div class="note"><strong>Note:</strong> this is a confirmation screen, not an identity check. Check the alcohol rules that apply in each country where you sell.</div>
+
+    <h2 id="quiz">Taste quiz</h2>
+    <ol>
+      <li>Add up to four questions in the Taste quiz section. Each answer has a label and a tag.</li>
+      <li>Add those tags to your products, for example <code>bold</code> or <code>red-meat</code>.</li>
+      <li>Choose the collection for the results. Shoppers land on that collection filtered by the tags they picked.</li>
+    </ol>
+
+    <h2 id="languages">Languages and markets</h2>
+    <p>Solera includes English, Spanish and Brazilian Portuguese. To sell in more languages, add them in <strong>Settings → Languages</strong>. When you sell in more than one country or language, the selectors appear in the footer and the mobile menu.</p>
+
+    <h2 id="updates">Updating the theme</h2>
+    <p>When a new version is released, Shopify shows an update notice in <strong>Online Store → Themes</strong>. Updating adds a new copy of the theme to your library with your settings and content. Review it before you publish. Code changes you made yourself are not carried over.</p>
+
+    <h2 id="custom-code">Custom code</h2>
+    <p>Changes to theme code are not covered by support. If you edit the code:</p>
+    <ul>
+      <li>Always duplicate your theme first and work on the copy.</li>
+      <li>Keep a list of your changes, because they are not carried over when you update the theme.</li>
+      <li>For larger changes, we recommend hiring a <a href="https://www.shopify.com/partners/directory" rel="noopener">Shopify Partner</a>.</li>
+    </ul>
+
+    <h2 id="support-policy">Support policy</h2>
+    <ul>
+      <li>We reply to every request within <strong>two business days</strong>, Monday to Friday.</li>
+      <li>Support covers theme setup, theme settings and bugs in the theme.</li>
+      <li>Support does not include custom code, design work, third-party apps or help with products that use the theme in ways it was not built for.</li>
+      <li>We fix confirmed bugs in a future update and tell you when it is available.</li>
+    </ul>
+    <p><a class="btn" href="support.html">Contact support</a></p>
+
+    <h2 id="faq">FAQ</h2>
+    <details><summary>Can I use Solera if I don't sell drinks?</summary><div><p>Yes. The tasting scales, vintages and age verification are optional. Turn them off or remove their sections and Solera works as an editorial theme for any small or mid-size catalog.</p></div></details>
+    <details><summary>Why isn't the tasting profile showing on my product?</summary><div><p>The section only appears when at least one scale has a value from 1 to 5. Check that the metafield names match the table in <a href="#metafields">Tasting metafields</a> and that the values are whole numbers.</p></div></details>
+    <details><summary>Why don't I see my vintages as large buttons?</summary><div><p>The <strong>Vintage option name</strong> setting must match your option name exactly, without extra spaces. Uppercase and lowercase don't matter.</p></div></details>
+    <details><summary>The box builder shows savings but checkout doesn't. What's wrong?</summary><div><p>Create automatic discounts that match each tier in <strong>Discounts</strong>. See <a href="#box-builder">Box builder</a>.</p></div></details>
+    <details><summary>Why can't I see the free shipping bar?</summary><div><p>Check that the goal in <strong>Theme settings → Cart</strong> is above 0 and that you are browsing in your store's main currency.</p></div></details>
+    <details><summary>Where are the filters on my collection pages?</summary><div><p>Install Shopify's free Search &amp; Discovery app and add filters there. Then check that <strong>Enable filtering and sorting</strong> is on in the Product grid section.</p></div></details>
+    <details><summary>Does Solera work with review apps?</summary><div><p>Yes. Add the review app block in the Product information section, or anywhere apps can add blocks.</p></div></details>
+    <details><summary>Is the age verification legally enough?</summary><div><p>It is a confirmation screen. Rules differ by country, so check the requirements where you sell and add any checks your checkout or shipping provider needs.</p></div></details>
+    <details><summary>How do I change the fonts?</summary><div><p>Go to <strong>Theme settings → Typography</strong> and choose any font from the Shopify font library for headings and body text.</p></div></details>
+
+    <h2 id="release-notes">Release notes</h2>
+    <h3>1.0.5</h3>
+    <ul>
+      <li>The cart suggestions heading only shows when there are products to suggest.</li>
+      <li>Plan prices and buttons line up at the bottom.</li>
+      <li>Empty lines pasted into rich text no longer add extra space.</li>
+    </ul>
+    <h3>1.0.4</h3>
+    <ul>
+      <li>Fixed the "From" price on products whose variants have different prices.</li>
+      <li>Fixed the amount shown in the free shipping message and on gift cards.</li>
+      <li>More room for product names in the box builder.</li>
+    </ul>
+    <h3>1.0.3</h3>
+    <ul>
+      <li>Tasting notes written as comma-separated text now show as separate chips.</li>
+      <li>The variant comparison hides columns without data.</li>
+    </ul>
+    <h3>1.0.2</h3>
+    <ul>
+      <li>The vintage number over the product image now follows the selected vintage on every image.</li>
+    </ul>
+    <h3>1.0.1</h3>
+    <ul>
+      <li>Improved the mobile header so the logo, account and cart always fit.</li>
+      <li>Buttons without a link now go to all products.</li>
+      <li>The Buy it now button follows the theme colors.</li>
+      <li>The tasting profile is hidden on products without tasting data.</li>
+      <li>Policy links in the footer have their own row.</li>
+    </ul>
+    <h3>1.0.0</h3>
+    <p class="hint">First release.</p>
+    <ul>
+      <li>Three presets: Solera, Tueste and Hoja.</li>
+      <li>Tasting profile, vintage picker and variant comparison.</li>
+      <li>Box builder, subscription plans and taste quiz.</li>
+      <li>Cart drawer with free shipping goal, gift wrap and order note.</li>
+      <li>Age verification.</li>
+      <li>English, Spanish and Brazilian Portuguese.</li>
+    </ul>
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <span>Solera theme documentation · version 1.0.5</span>
+    <a href="support.html">Contact support</a>
+  </div>
+</footer>
+</body>
+</html>
